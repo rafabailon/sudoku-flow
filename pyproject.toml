@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sudoku-flow"
+version = "1.1.0"
+description = "Dependency-free Sudoku solver, solution counter and CLI with strict validation."
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = [
+    "sudoku",
+    "constraint-satisfaction",
+    "backtracking",
+    "command-line",
+    "python",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+
+[project.scripts]
+sudoku-flow = "sudoku_flow:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["sudoku_flow", "cli", "solver", "_version"]
